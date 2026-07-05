@@ -13,7 +13,7 @@ const TeacherMyCourses = () => {
   const fetchCourses = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/courses/instructor/${user._id}`
+        `https://learnsphere-production-14f7.up.railway.app/api/courses/instructor/${user._id}`
       );
       setCourses(res.data);
     } catch (err) {
@@ -30,7 +30,7 @@ const TeacherMyCourses = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this course?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/courses/${id}`);
+      await axios.delete(`https://learnsphere-production-14f7.up.railway.app/api/courses/${id}`);
       setCourses(courses.filter((c) => c._id !== id));
     } catch (err) {
       console.error(err);

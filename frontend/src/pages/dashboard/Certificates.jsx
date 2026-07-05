@@ -13,7 +13,7 @@ const Certificates = () => {
     const fetchCertificates = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/certificates/${user._id}`
+          `https://learnsphere-production-14f7.up.railway.app/api/certificates/${user._id}`
         );
         setCertificates(res.data);
       } catch (err) {

@@ -25,7 +25,7 @@ const Register = () => {
     e.preventDefault();
     setError("");
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", formData);
+      const res = await axios.post("https://learnsphere-production-14f7.up.railway.app/api/auth/register", formData);
       login(res.data);
       navigate("/");
     } catch (err) {

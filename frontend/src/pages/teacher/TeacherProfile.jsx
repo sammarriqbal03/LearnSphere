@@ -13,7 +13,7 @@ const TeacherProfile = () => {
     const fetchCount = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/courses/instructor/${user._id}`
+          `https://learnsphere-production-14f7.up.railway.app/api/courses/instructor/${user._id}`
         );
         setCourseCount(res.data.length);
       } catch (err) {

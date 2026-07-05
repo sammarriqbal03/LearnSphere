@@ -13,7 +13,7 @@ const Progress = () => {
     const fetchEnrollments = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/enrollments/${user._id}`
+          `https://learnsphere-production-14f7.up.railway.app/api/enrollments/${user._id}`
         );
         setEnrollments(res.data);
       } catch (err) {

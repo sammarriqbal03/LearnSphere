@@ -17,7 +17,7 @@ const CourseDetails = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/courses/${id}`);
+        const res = await axios.get(`https://learnsphere-production-14f7.up.railway.app/api/courses/${id}`);
         setCourse(res.data);
       } catch (err) {
         console.error(err);
@@ -35,7 +35,7 @@ const CourseDetails = () => {
       return;
     }
     try {
-      await axios.post("http://localhost:5000/api/enrollments", {
+      await axios.post("https://learnsphere-production-14f7.up.railway.app/api/enrollments", {
         studentId: user._id,
         courseId: course._id,
       });
@@ -52,7 +52,7 @@ const CourseDetails = () => {
       return;
     }
     try {
-      await axios.post("http://localhost:5000/api/wishlist", {
+      await axios.post("https://learnsphere-production-14f7.up.railway.app/api/wishlist", {
         studentId: user._id,
         courseId: course._id,
       });

@@ -14,7 +14,7 @@ const Courses = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/courses");
+        const res = await axios.get("https://learnsphere-production-14f7.up.railway.app/api/courses");
         setCourses(res.data);
       } catch (err) {
         console.error(err);

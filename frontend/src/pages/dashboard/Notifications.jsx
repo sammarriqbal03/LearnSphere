@@ -16,8 +16,8 @@ const Notifications = () => {
     const fetchNotifications = async () => {
       try {
         const [enrollRes, certRes] = await Promise.all([
-          axios.get(`http://localhost:5000/api/enrollments/${user._id}`),
-          axios.get(`http://localhost:5000/api/certificates/${user._id}`),
+          axios.get(`https://learnsphere-production-14f7.up.railway.app/api/enrollments/${user._id}`),
+          axios.get(`https://learnsphere-production-14f7.up.railway.app/api/certificates/${user._id}`),
         ]);
 
         const notifs = [

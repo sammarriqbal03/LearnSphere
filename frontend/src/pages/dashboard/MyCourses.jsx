@@ -15,7 +15,7 @@ const MyCourses = () => {
 
   const fetchEnrollments = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/enrollments/${user._id}`);
+      const res = await axios.get(`https://learnsphere-production-14f7.up.railway.app/api/enrollments/${user._id}`);
       setEnrollments(res.data);
     } catch (err) {
       console.error(err);
@@ -30,7 +30,7 @@ const MyCourses = () => {
 
   const handleComplete = async (courseId) => {
     try {
-      await axios.post("http://localhost:5000/api/certificates", {
+      await axios.post("https://learnsphere-production-14f7.up.railway.app/api/certificates", {
         studentId: user._id,
         courseId,
       });
@@ -44,7 +44,7 @@ const MyCourses = () => {
   const submitRating = async (courseId) => {
     if (stars === 0) return;
     try {
-      await axios.post("http://localhost:5000/api/ratings", {
+      await axios.post("https://learnsphere-production-14f7.up.railway.app/api/ratings", {
         courseId,
         studentId: user._id,
         stars,

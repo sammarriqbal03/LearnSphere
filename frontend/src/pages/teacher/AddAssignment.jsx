@@ -13,7 +13,7 @@ const AddAssignment = () => {
     const fetchCourses = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/courses/instructor/${user._id}`
+          `https://learnsphere-production-14f7.up.railway.app/api/courses/instructor/${user._id}`
         );
         setCourses(res.data);
       } catch (err) {
@@ -30,7 +30,7 @@ const AddAssignment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/assignments", formData);
+      await axios.post("https://learnsphere-production-14f7.up.railway.app/api/assignments", formData);
       setMsg("Assignment created successfully!");
       setFormData({ course: "", title: "", description: "", dueDate: "" });
     } catch (err) {

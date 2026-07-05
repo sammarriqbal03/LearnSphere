@@ -34,7 +34,7 @@ const AddCourse = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/courses/upload-image",
+        "https://learnsphere-production-14f7.up.railway.app/api/courses/upload-image",
         imgData
       );
       setFormData((prev) => ({ ...prev, thumbnail: res.data.url }));
@@ -51,7 +51,7 @@ const AddCourse = () => {
     setError("");
     setSuccess("");
     try {
-      await axios.post("http://localhost:5000/api/courses", {
+      await axios.post("https://learnsphere-production-14f7.up.railway.app/api/courses", {
         ...formData,
         instructor: user._id,
         price: Number(formData.price),

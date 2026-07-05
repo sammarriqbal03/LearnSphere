@@ -11,7 +11,7 @@ const Teachers = () => {
   useEffect(() => {
     const fetchTeachers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/teachers");
+        const res = await axios.get("https://learnsphere-production-14f7.up.railway.app/api/auth/teachers");
         setTeachers(res.data);
       } catch (err) {
         console.error(err);

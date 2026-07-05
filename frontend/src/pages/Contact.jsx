@@ -31,7 +31,7 @@ const Contact = () => {
     e.preventDefault();
     setError("");
     try {
-      await axios.post("http://localhost:5000/api/contact", formData);
+      await axios.post("https://learnsphere-production-14f7.up.railway.app/api/contact", formData);
       setSubmitted(true);
     } catch (err) {
       setError("Failed to send message. Please try again.");

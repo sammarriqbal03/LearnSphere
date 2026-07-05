@@ -14,7 +14,7 @@ const TeacherSettings = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/auth/update-profile/${user._id}`,
+        `https://learnsphere-production-14f7.up.railway.app/api/auth/update-profile/${user._id}`,
         { name }
       );
       login({ ...user, name: res.data.name });
@@ -29,7 +29,7 @@ const TeacherSettings = () => {
     setPasswordMsg("");
     try {
       await axios.put(
-        `http://localhost:5000/api/auth/change-password/${user._id}`,
+        `https://learnsphere-production-14f7.up.railway.app/api/auth/change-password/${user._id}`,
         passwords
       );
       setPasswordMsg("Password changed successfully!");

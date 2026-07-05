@@ -12,7 +12,7 @@ const Wishlist = () => {
 
   const fetchWishlist = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/wishlist/${user._id}`);
+      const res = await axios.get(`https://learnsphere-production-14f7.up.railway.app/api/wishlist/${user._id}`);
       setItems(res.data);
     } catch (err) {
       console.error(err);
@@ -27,7 +27,7 @@ const Wishlist = () => {
 
   const handleRemove = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/wishlist/${id}`);
+      await axios.delete(`https://learnsphere-production-14f7.up.railway.app/api/wishlist/${id}`);
       setItems(items.filter((item) => item._id !== id));
     } catch (err) {
       console.error(err);

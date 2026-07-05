@@ -12,7 +12,7 @@ const Ratings = () => {
     const fetchRatings = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/ratings/instructor/${user._id}`
+          `https://learnsphere-production-14f7.up.railway.app/api/ratings/instructor/${user._id}`
         );
         setRatings(res.data);
       } catch (err) {

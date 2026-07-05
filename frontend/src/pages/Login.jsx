@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     setError("");
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", formData);
+      const res = await axios.post("https://learnsphere-production-14f7.up.railway.app/api/auth/login", formData);
       login(res.data);
       navigate("/");
     } catch (err) {

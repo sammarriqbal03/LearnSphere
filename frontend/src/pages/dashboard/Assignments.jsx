@@ -15,8 +15,8 @@ const Assignments = () => {
   const fetchData = async () => {
     try {
       const [aRes, sRes] = await Promise.all([
-        axios.get(`http://localhost:5000/api/assignments/student/${user._id}`),
-        axios.get(`http://localhost:5000/api/assignments/submissions/${user._id}`),
+        axios.get(`https://learnsphere-production-14f7.up.railway.app/api/assignments/student/${user._id}`),
+        axios.get(`https://learnsphere-production-14f7.up.railway.app/api/assignments/submissions/${user._id}`),
       ]);
       setAssignments(aRes.data);
       setSubmissions(sRes.data);
@@ -37,7 +37,7 @@ const Assignments = () => {
   const handleSubmit = async (assignmentId) => {
     if (!answer.trim()) return;
     try {
-      await axios.post("http://localhost:5000/api/assignments/submit", {
+      await axios.post("https://learnsphere-production-14f7.up.railway.app/api/assignments/submit", {
         assignmentId,
         studentId: user._id,
         answerText: answer,
