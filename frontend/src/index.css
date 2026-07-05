@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #145c3d;
+  --color-primary-dark: #0d3b28;
+  --color-primary-light: #3aa655;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pageSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Gradient utility classes — poori site mein inhe use karein */
+.gradient-primary {
+  background: linear-gradient(135deg, #0d3b28 0%, #145c3d 50%, #3aa655 100%);
+}
+
+.gradient-primary-soft {
+  background: linear-gradient(135deg, #145c3d 0%, #3aa655 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #145c3d, #3aa655);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
