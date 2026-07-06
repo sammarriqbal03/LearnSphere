@@ -45,7 +45,6 @@ Home · Courses · Course Details · Teachers · Pricing · Events · Blog · FA
 - 🔍 Search & filter courses
 - 🎓 Auto-generated certificates
 - 📱 Fully responsive (mobile hamburger menu, adaptive dashboards)
-- 🌗 Dark mode toggle
 - 🔐 JWT-based authentication with role-based access (Student / Teacher)
 - ⭐ Course ratings & reviews
 - 📩 Contact form (saved to database)
