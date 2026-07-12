@@ -95,7 +95,7 @@ const Courses = () => {
 
               <Link
                 to={`/courses/${course._id}`}
-                className="bg-primary text-white text-center py-2 rounded-lg hover:bg-primary-dark transition"
+                className="bg-primary !text-white text-center py-2 rounded-lg hover:bg-primary-dark transition"
               >
                 View Course
               </Link>
